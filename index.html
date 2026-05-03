@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - OB Montessori</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+    <div class="login-card">
+        <div class="login-left">
+            <h2>Login</h2>
+            <p>Please enter your details below</p>
+
+<div class="demo-credentials">
+  <p><strong>Student ID:</strong> 1504983384</p>
+  <p><strong>Password:</strong> 67</p>
+</div>
+              
+            <img src="OBMC 60 Icon_Circle.png" alt="Logo" class="login-logo">
+            
+            <div class="input-group">
+                <label>Student ID:</label>
+                <input type="text" id="username">
+            </div>
+
+            <div class="input-group">
+                <label>Password:</label>
+                <input type="password" id="password">
+            </div>
+            
+            <div class="login-options">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <p id="errorMsg" style="color:red; margin-top:10px;"></p>
+
+            <button class="login-btn" onclick="login()">LOGIN</button>
+
+        </div>
+
+        <div class="login-right">
+            <div class="welcome-text">
+                <h1>Welcome back!</h1>
+                <p>Continue nurturing young minds and exploring new ways to inspire at <b>OB Montessori Center</b>.</p>
+                <small>Not a member yet? <a href="#">Register now</a></small>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+    <p>Bae & Santos² | 9 - Emerald © 2026</p>
+    <small>Source:Shutter.com.flaticon.com, AI:ChatGPT.OBMC</small>
+</footer>
+    </div>
+
+
+    <script>
+        function login() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+            let error = document.getElementById("errorMsg");
+
+            if (user === "1504983384" && pass === "67") {
+                window.location.href = "dashboard.html";
+            } else {
+                error.textContent = "Wrong Username or Password!";
+            }
+        }
+    </script>
+
+</body>
+</html>
